@@ -1,0 +1,12 @@
+<div class="flex">
+  <mat-card
+    *ngFor="let card of cards; index as i"
+    class="w-96 m-4 cursor-pointer"
+    (click)="cardClickHandler(i)"
+  >
+    <img mat-card-image src="{{ card.thumbnail }}" />
+    <mat-card-content class="text-2xl mt-4">{{
+      card.description
+    }}</mat-card-content>
+  </mat-card>
+</div>

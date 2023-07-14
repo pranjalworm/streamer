@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "description": "A streaming server written in node, for streaming movies saved in a harddisk connected to my raspberry pi",
   "main": "server.ts",
-  "type": "module",
   "scripts": {
-    "start": "node dist/server.js",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon dist/server.js\"",
-    "build": "npx tsc"
+    "start": "node dist/server.js local",
+    "start:raspberry": "node dist/server.js raspberry",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon dist/server.js local\"",
+    "dev:raspberry": "concurrently \"npx tsc --watch\" \"nodemon dist/server.js raspberry\"",
+    "build": "rimraf dist && npx tsc"
   },
   "keywords": [],
   "author": "",

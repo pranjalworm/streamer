@@ -1,0 +1,11 @@
+<div>
+  <mat-card
+    *ngFor="let movie of movies; index as i"
+    class="w-96 m-4 cursor-pointer"
+    (click)="movieClickHandler(i)"
+  >
+    <mat-card-header>
+      <mat-card-title>{{ movie }}</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>
