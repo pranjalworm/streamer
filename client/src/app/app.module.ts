@@ -11,6 +11,7 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { AppComponent } from './components/app/app.component';
 import { PageNotFoundComponentComponent } from './components/page-not-found-component/page-not-found-component.component';
 import { PhotosComponent } from './components/photos/photos.component';
+import { VideoplayerComponent } from './components/videoplayer/videoplayer.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { PhotosComponent } from './components/photos/photos.component';
     AppComponent,
     PageNotFoundComponentComponent,
     PhotosComponent,
+    VideoplayerComponent,
   ],
   imports: [
     HttpClientModule,

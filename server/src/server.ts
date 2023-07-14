@@ -9,7 +9,7 @@ const app = express()
 
 app.use(cors())
 
-app.use('/movies', moviesRouter)
+app.use('/movies-api', moviesRouter)
 
 app.use('/', express.static('public'))
 

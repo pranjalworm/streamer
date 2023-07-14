@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { RoutePaths } from 'src/app/app-routing.module';
 import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
@@ -9,7 +11,7 @@ import { MoviesService } from 'src/app/services/movies.service';
 export class MoviesComponent {
   movies: any;
 
-  constructor(private moviesService: MoviesService) {}
+  constructor(private moviesService: MoviesService, private router: Router) {}
 
   ngOnInit() {
     this.getMovies();
@@ -21,5 +23,9 @@ export class MoviesComponent {
     });
   }
 
-  movieClickHandler(index: number) {}
+  movieClickHandler(index: number) {
+    const movieName = this.movies[index].name;
+
+    this.router.navigate(['video-player', movieName]);
+  }
 }
